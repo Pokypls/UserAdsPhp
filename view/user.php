@@ -5,9 +5,9 @@
     <title>Users</title>
 </head>
 <body>
-    <main>
-    <div class="flex-container">
     <?php include('header.php') ?>
+    <main>
+  
         <table border="2">
             <tr>
                 <th>Id</th>
@@ -26,7 +26,6 @@
         };
     ?>
         </table>
-    </div>
     </main>
     <?php include('footer.php') ?>
 </body>

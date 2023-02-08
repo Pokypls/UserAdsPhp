@@ -1,1 +1,1 @@
-<p class="footer">Author: Balint Boglarka, 2023 // TODO css for this</p>
+<p class="footer">Author: Balint Boglarka, 2023</p>

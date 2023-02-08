@@ -5,11 +5,12 @@
     <title>Users and Advertisements</title>
 </head>
 <body>
+    <?php include('header.php') ?>
     <main>
         <header>
-            <h1>Choose one please:</h1>
+            <h1>Welcome to my page!</h1>
+            <h2>Please choose a page from the menu above!</h2>
         </header>
-    <?php include('header.php') ?>
     </main>
     <?php include('footer.php') ?>
 </body>
