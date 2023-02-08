@@ -2,6 +2,8 @@
     require('../model/model_ads.php'); 
     require('../model/model_user.php');
     require('../model/classes/myuser.php'); 
+    require('../model/classes/myad.php');
+
 
     function list_users() {
         $users = list_all_users();
@@ -19,6 +21,12 @@
         } else {
             $allads = list_all_ads();
         }
-        return $allads;
+
+        $adsobjects = array();
+        foreach ($allads as $act_ad) {
+            $adobj = new MyAd($act_ad[0], $act_ad[1], $act_ad[2]);
+            array_push($adsobjects, $adobj);
+        };
+        return $adsobjects;
     }
 ?>

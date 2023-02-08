@@ -18,9 +18,9 @@
         $ads = list_ads(null);
         foreach ($ads as $act_ad) {
             echo "<tr>";
-            echo "<td>".$act_ad[0]."</td>";
-            echo "<td>".$act_ad[1]."</td>";
-            echo "<td>".$act_ad[2]."</td>";
+            echo "<td>".$act_ad->getId()."</td>";
+            echo "<td>".$act_ad->getUserId()."</td>";
+            echo "<td>".$act_ad->getTitle()."</td>";
             echo "</tr>";
         };
     ?>
