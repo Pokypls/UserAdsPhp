@@ -1,8 +1,7 @@
 <?php
     require('../model/model_ads.php'); 
     require('../model/model_user.php');
-    require('../model/classes/myuser.php'); 
-    require('../model/classes/myad.php');
+    require('../model/classes/allclass.php');
 
 
     function list_users() {
