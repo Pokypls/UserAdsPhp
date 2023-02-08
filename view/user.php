@@ -15,12 +15,13 @@
             </tr>
     <?php
         require('../controller/controller.php');
+
         $users = list_users();
         
         foreach ($users as $act_user) {
             echo "<tr>";
-            echo "<td>".$act_user[0]."</td>";
-            echo "<td>".$act_user[1]."</td>";
+            echo "<td>".$act_user->getId()."</td>";
+            echo "<td>".$act_user->getName()."</td>";
             echo "</tr>";
         };
     ?>
