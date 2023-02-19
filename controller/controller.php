@@ -8,7 +8,7 @@
         $users = list_all_users();
         $userobjects = array();
         foreach ($users as $act_user) {
-            $userobj = new MyUser($act_user[0], $act_user[1]);
+            $userobj = new MyUser($act_user[0], $act_user[1],$act_user[2]);
             array_push($userobjects, $userobj);
         };
         return $userobjects;
@@ -28,4 +28,40 @@
         };
         return $adsobjects;
     }
+
+
+        function alreadyUser($chusern) {
+            $alluser = list_users();
+
+            $exist = false;
+
+            foreach ($alluser as $user) {
+                $user_Name = $user->getUserName();
+                if ($user_Name == $chusern) {
+                    $exist = true;
+                }
+            } 
+            return $exist;
+        }
+
+
+
+
+
+        function reg_User($u,$p,$n) {
+            $actunamexist = alreadyUser($u);
+            if ($actunamexist == true) {
+                $result = "Unsuccessful registration (username is already taken) :(";
+            } else {
+                $result = add_User($u,$p,$n);
+            }
+            return $result;
+        }
+            /*listuserst meg kell hivni és az eredményét odaadni az already user
+             függvénynek plusz az $u -t és haez true akkor már létezik felhasználónév, akkor
+             ezzel a szöveggel visszakell térni: létezik felh név, egyébként 
+             padig addusert hivjuk meg és annaka  visszatérési értékével kell visszatérni. 
+             username myuser és listallusersbe is bekerüljön */
+           
+        
 ?>

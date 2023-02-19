@@ -36,15 +36,21 @@ class MyAd extends MyId {
 
 class MyUser extends MyId {
     
-    private $name;
+    public $name;
 
-    function __construct($idparam, $nameparam) {
+    public $username;
+
+    function __construct($idparam, $nameparam, $username) {
         parent::__construct($idparam);
         $this->name = $nameparam;
+        $this->username = $username;
     }
 
 
     public function getName() {
         return $this->name;
+    }
+    public function getUserName() {
+        return $this->username;
     }
 }

@@ -1,0 +1,15 @@
+input[type=text] {
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+  }
+
+
+  .navbar {
+    display: inline;
+    padding: 0;
+  }
